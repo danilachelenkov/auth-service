@@ -1,10 +1,5 @@
 package ru.netology.authservice.controler;
 
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import ru.netology.authservice.domain.Authorities;
 import ru.netology.authservice.exception.InvalidCredentials;
@@ -17,7 +12,7 @@ import java.util.List;
 @RequestMapping("/")
 public class AuthorizationController {
 
-    private AuthorizationService service;
+    private final AuthorizationService service;
 
     public AuthorizationController(AuthorizationService service) {
         this.service = service;
