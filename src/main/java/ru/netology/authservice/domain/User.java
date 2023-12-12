@@ -1,30 +1,39 @@
 package ru.netology.authservice.domain;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+
 import java.util.Objects;
 
 public class User {
 
-    private String name;
+    @NotNull
+    @NotBlank
+    @Size(min=1, max = 50)
+    private String user;
+    @NotBlank
+    @Size(min=5, max = 15)
     private String password;
 
     public User() {
     }
 
-    public User(String name, String password) {
-        this.name = name;
+    public User(String user, String password) {
+        this.user = user;
         this.password = password;
     }
 
-    public String getName() {
-        return name;
+    public String getUser() {
+        return user;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUser(String user) {
+        this.user = user;
     }
 
     public void setPassword(String password) {
@@ -35,20 +44,20 @@ public class User {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        User user = (User) o;
-        return Objects.equals(name, user.name) && Objects.equals(password, user.password);
+        User userObj = (User) o;
+        return Objects.equals(this.user, userObj.user) && Objects.equals(this.password, userObj.password);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, password);
+        return Objects.hash(this.user, this.password);
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "name='" + name + '\'' +
-                ", password='" + password + '\'' +
+                "userName='" + this.user + '\'' +
+                ", password='" + this.password + '\'' +
                 '}';
     }
 }
