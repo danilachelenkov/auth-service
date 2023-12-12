@@ -16,9 +16,9 @@ public class UserRepository {
     public UserRepository() {
         authInMemory = new HashMap<>();
         authInMemory = Map.of(
-                new User("Ivan", "1234"), List.of(Authorities.READ),
-                new User("Svetlana", "777"), List.of(Authorities.READ, Authorities.WRITE),
-                new User("Goga", "777"), List.of(Authorities.READ, Authorities.WRITE, Authorities.DELETE)
+                new User("Ivan", "12345678"), List.of(Authorities.READ),
+                new User("Svetlana", "777777"), List.of(Authorities.READ, Authorities.WRITE),
+                new User("Goga", "777111"), List.of(Authorities.READ, Authorities.WRITE, Authorities.DELETE)
         );
 
     }
