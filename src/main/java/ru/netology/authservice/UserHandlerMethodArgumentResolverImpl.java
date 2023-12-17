@@ -1,6 +1,5 @@
 package ru.netology.authservice;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.core.MethodParameter;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.support.WebDataBinderFactory;
