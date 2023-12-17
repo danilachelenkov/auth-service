@@ -1,5 +1,5 @@
 #Задаем базовый образ для контейнер
-FROM openjdk:8-jdk-alpine
+FROM openjdk:21-jdk
 
 #Внутренний порт REST-приложения
 EXPOSE 8081
