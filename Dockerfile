@@ -1,5 +1,5 @@
 #Задаем базовый образ для контейнер
-FROM openjdk:21-jdk
+FROM openjdk:22-ea-21-slim-bullseye
 
 #Внутренний порт REST-приложения
 EXPOSE 8081
